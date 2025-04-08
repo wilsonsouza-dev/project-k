@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { Carousel } from 'primeng/carousel';
@@ -43,7 +42,6 @@ import { Card } from 'primeng/card';
     Carousel,
     Tag,
     Image,
-    FontAwesomeModule,
     ToggleButtonModule,
     FormsModule,
     MenuItemContent,
@@ -74,7 +72,6 @@ import { Card } from 'primeng/card';
     Carousel,
     Tag,
     Image,
-    FontAwesomeModule,
     ToggleButtonModule,
     FormsModule,
     MenuItemContent,

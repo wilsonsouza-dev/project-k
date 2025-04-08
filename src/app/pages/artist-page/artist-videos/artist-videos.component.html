@@ -1,9 +1,16 @@
+<h1 class="text-6xl font-extrabold text-center">
+  <span
+    class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text"
+  >
+    🎬 MVs
+  </span>
+</h1>
 <p-carousel
   [value]="videos"
   [numVisible]="3"
   [numScroll]="1"
   [responsiveOptions]="responsiveOptions"
-  styleClass="w-4/5 mx-auto"
+  styleClass="w-4/5 mx-auto mt-10"
 >
   <ng-template pTemplate="item" let-video>
     <div class="p-3 cursor-pointer" (click)="openVideo(video)">
