@@ -1,0 +1,82 @@
+<div class="max-w-4/5 mx-auto my-4 flex flex-row items-center justify-between">
+  <!-- Items -->
+  <div class="flex items-center gap-4">
+    <img src="/assets/favicon.svg" alt="Logo" class="w-12 h-12" />
+    <div class="flex gap-3 text-lg">
+      <button class="btn-custom" [routerLink]="'/'">
+        <i class="fa fa-house"></i>
+        <span>Início</span>
+      </button>
+      <button class="btn-custom" (click)="goToArtistPageAndGetRandomArtist()">
+        <i class="fa fa-shuffle"></i>
+        <span>Aleatório</span>
+      </button>
+      <button class="btn-custom" [routerLink]="'/news'">
+        <i class="fa fa-newspaper"></i>
+        <span>Novidades</span>
+      </button>
+      <button class="btn-custom" [routerLink]="'/history'">
+        <i class="fa fa-building"></i>
+        <span>História</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <p-select
+    [options]="allArtists"
+    [(ngModel)]="selectArtist"
+    optionLabel="name"
+    [filter]="true"
+    filterBy="name"
+    size="large"
+    [showClear]="true"
+    placeholder="Selecione o Artista"
+    styleClass="w-full md:w-96 rounded-2xl"
+    (onChange)="onArtistSelect()"
+  >
+    <ng-template #selectedItem let-selectArtist>
+      <div class="flex items-center gap-2">
+        <img
+          [src]="selectArtist?.images?.[2]?.url || '/assets/default-artist.png'"
+          alt="Logo"
+          class="w-7 h-7 rounded-border"
+        />
+        <div>{{ selectArtist.name }}</div>
+      </div>
+    </ng-template>
+    <ng-template let-artist #item>
+      <div class="flex items-center gap-3">
+        <img
+          [src]="artist?.images?.[2]?.url || '/assets/default-artist.png'"
+          alt="Logo"
+          class="w-22 h-22 rounded-lg"
+        />
+        <div class="text-2xl">{{ artist.name }}</div>
+      </div>
+    </ng-template>
+  </p-select>
+
+  <!-- User -->
+  <div *ngIf="user$ | async as user; else loginButton">
+    <p-menu [model]="menuItems" [popup]="true" #menu></p-menu>
+    <button (click)="menu.toggle($event)" class="btn-custom">
+      <img [src]="user?.images?.[0]?.url" class="w-8 h-8 rounded-full" />
+      <span class="text-2xl font-semibold text-white tracking-wide">{{
+        user?.display_name
+      }}</span>
+      <i class="fa fa-chevron-down"></i>
+    </button>
+  </div>
+
+  <!-- Login -->
+  <ng-template #loginButton>
+    <button
+      class="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition cursor-pointer"
+      (click)="redirectToSpotify()"
+    >
+      <i class="fab fa-spotify text-2xl"></i>
+      <span class="hidden md:block">Login Spotify</span>
+    </button>
+  </ng-template>
+</div>

@@ -1,0 +1,122 @@
+<h1 class="text-4xl font-extrabold text-center text-white mt-10 mb-6">
+  <span
+    class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text"
+  >
+    🎶 Recomendações
+  </span>
+</h1>
+<ng-container *ngIf="isTracksLoaded; else skeletonHotReleases">
+  <p-carousel
+    styleClass="w-6xl mx-auto my-10"
+    [value]="tracks"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="4000"
+  >
+    <ng-template let-track #item>
+      <div class="flex">
+        <!-- Imagem do artista + Nome -->
+        <div class="flex flex-col items-center text-center relative">
+          <img
+            [src]="track.artists[0].images[0].url"
+            [alt]="track.name"
+            class="rounded-s-2xl object-cover"
+          />
+          <div class="mt-2 text-xl font-semibold">
+            {{ track.artists[0].name }}
+          </div>
+          <div
+            class="w-full text-base mt-2 flex justify-center gap-2 font-semibold"
+          >
+            <app-standard-button
+              [label]="'Perfil'"
+              [color]="'primary'"
+              [icon]="'fas fa-user'"
+              (onClick)="goToArtistProfile(track.artists[0].id)"
+            ></app-standard-button>
+            <app-standard-button
+              [label]="'Spotify'"
+              [color]="'success'"
+              [icon]="'fab fa-spotify'"
+              (onClick)="openSpotify(track.artists[0].external_urls.spotify)"
+            ></app-standard-button>
+            <app-standard-button
+              [label]="'YouTube'"
+              [color]="'danger'"
+              [icon]="'fab fa-youtube'"
+            ></app-standard-button>
+          </div>
+        </div>
+
+        <!-- Imagem do álbum + Nome -->
+        <div class="flex flex-col items-center text-center relative">
+          <img
+            [src]="track.album.images[0].url"
+            [alt]="track.name"
+            class="rounded-e-2xl object-cover"
+          />
+          <ng-container *ngIf="track.album.name.length > 50; else normalFont">
+            <div class="mt-2 text-base font-semibold">
+              {{ track.album.name }}
+            </div>
+          </ng-container>
+
+          <ng-template #normalFont>
+            <div class="mt-2 text-xl font-semibold">
+              {{ track.album.name }}
+            </div>
+          </ng-template>
+          <div
+            class="w-full text-base mt-2 flex justify-center gap-2 font-semibold"
+          >
+            <app-standard-button
+              [label]="'Spotify'"
+              [color]="'success'"
+              [icon]="'fab fa-spotify'"
+              (onClick)="openSpotify(track.album.external_urls.spotify)"
+            ></app-standard-button>
+            <app-standard-button
+              [label]="'YouTube'"
+              [color]="'danger'"
+              [icon]="'fab fa-youtube'"
+            ></app-standard-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</ng-container>
+
+<ng-template #skeletonHotReleases>
+  <div class="flex items-center justify-center mt-10 mb-20">
+    <!-- Skeleton do Artista -->
+    <div class="flex flex-col items-center">
+      <div
+        class="w-[468px] h-[468px] bg-gray-600 animate-pulse rounded-s-2xl mb-3"
+      ></div>
+      <div
+        class="w-[300px] h-[30px] bg-gray-600 animate-pulse rounded mb-3"
+      ></div>
+      <div class="w-full text-base flex justify-center gap-2 font-semibold">
+        <div class="w-[112px] h-[30px] bg-gray-600 animate-pulse rounded"></div>
+        <div class="w-[112px] h-[30px] bg-gray-600 animate-pulse rounded"></div>
+        <div class="w-[112px] h-[30px] bg-gray-600 animate-pulse rounded"></div>
+      </div>
+    </div>
+
+    <!-- Skeleton do Álbum -->
+    <div class="flex flex-col items-center">
+      <div
+        class="w-[468px] h-[468px] bg-gray-600 animate-pulse rounded-e-2xl mb-3"
+      ></div>
+      <div
+        class="w-[300px] h-[30px] bg-gray-600 animate-pulse rounded mb-3"
+      ></div>
+      <div class="w-full text-base flex justify-center gap-2 font-semibold">
+        <div class="w-[112px] h-[30px] bg-gray-600 animate-pulse rounded"></div>
+        <div class="w-[112px] h-[30px] bg-gray-600 animate-pulse rounded"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>

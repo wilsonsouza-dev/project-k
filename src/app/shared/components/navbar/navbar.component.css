@@ -1,0 +1,16 @@
+.btn-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+
+.btn-custom:hover {
+  background-color: #374151; /* Equivalent to hover:bg-gray-700 */
+}

@@ -1,0 +1,17 @@
+<button
+  [ngClass]="{
+    'bg-blue-600 hover:bg-blue-800': color === 'primary',
+    'bg-gray-600 hover:bg-gray-800': color === 'secondary',
+    'bg-red-600 hover:bg-red-800': color === 'danger',
+    'bg-green-600 hover:bg-green-800': color === 'success',
+    'opacity-50 cursor-not-allowed': disabled
+  }"
+  class="text-white text-lg w-30 h-10 rounded-md transition-colors flex items-center gap-2 cursor-pointer font-bold justify-center"
+  [disabled]="disabled"
+  (click)="handleClick()"
+>
+  <!-- Ícone (se fornecido) -->
+  <i *ngIf="icon" [class]="icon"></i>
+  <!-- Texto do botão -->
+  <span>{{ label }}</span>
+</button>

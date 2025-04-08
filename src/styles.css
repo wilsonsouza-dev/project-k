@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #003366, #121212, #003366);
+  background-size: 300% 300%;
+  animation: gradientAnimation 7s ease infinite;
+  color: aliceblue;
+}
+

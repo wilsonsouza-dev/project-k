@@ -1,0 +1,80 @@
+<h1
+  class="text-4xl font-extrabold text-center text-white mt-10 mb-6 tracking-wide"
+>
+  <span
+    class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text"
+  >
+  ✨ Últimos Lançamentos
+  </span>
+</h1>
+<ng-container *ngIf="isNewReleasesLoaded; else skeletonNewReleases">
+  <p-carousel
+    styleClass="w-7xl mx-auto my-10"
+    [value]="newReleases"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="4000"
+  >
+    <ng-template let-newRelease #item>
+      <!-- Imagem do álbum + Nome -->
+      <div class="flex flex-col items-center text-center relative p-3">
+        <img
+          [src]="newRelease.images[0].url"
+          [alt]="newRelease.name"
+          class="rounded-2xl object-cover cursor-pointer"
+          (click)="openAlbumDialog(newRelease)"
+        />
+        <ng-container *ngIf="newRelease.name.length > 50; else normalFont">
+          <div class="mt-2 text-sm font-semibold max-w-3xs truncate">
+            {{ newRelease.name }}
+          </div>
+        </ng-container>
+
+        <ng-template #normalFont>
+          <div class="mt-2 text-lg font-semibold">
+            {{ newRelease.name }}
+          </div>
+        </ng-template>
+
+        <div class="text-gray-400 text-base mt-1 flex justify-center gap-2">
+          <div>👤 {{ newRelease.artists[0].name }}</div>
+          <div>📅 {{ newRelease.release_date | date : "dd-MM-yyyy" }}</div>
+          <div>🎵 {{ newRelease.total_tracks }} músicas</div>
+        </div>
+
+        <app-standard-button
+          [label]="'Spotify'"
+          [color]="'success'"
+          [icon]="'fab fa-spotify'"
+          (onClick)="openSpotify(newRelease.external_urls.spotify)"
+          class="mt-2"
+        ></app-standard-button>
+      </div>
+    </ng-template>
+  </p-carousel>
+</ng-container>
+<app-album-dialog></app-album-dialog>
+
+<!-- Skeleton Loader -->
+<ng-template #skeletonNewReleases>
+  <div class="w-7xl mx-auto my-10 grid grid-cols-1 md:grid-cols-3 p-3">
+    <!-- Card Skeleton -->
+    <div
+      *ngFor="let item of [1, 2, 3]"
+      class="flex flex-col items-center text-center p-3 animate-pulse"
+    >
+      <!-- Image Placeholder -->
+      <div class="bg-gray-700 rounded-2xl h-90 w-full"></div>
+
+      <!-- Title Placeholder -->
+      <div class="mt-4 h-5 bg-gray-700 rounded w-2/3"></div>
+
+      <!-- Subtext Placeholder -->
+      <div class="mt-2 h-4 bg-gray-600 rounded w-1/2"></div>
+
+      <!-- Button Placeholder -->
+      <div class="mt-4 h-10 bg-gray-700 rounded-full w-1/2"></div>
+    </div>
+  </div>
+</ng-template>

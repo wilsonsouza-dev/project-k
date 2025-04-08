@@ -1,0 +1,104 @@
+<!-- Cabeçalho com seletor de ordenação e paginador -->
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-col justify-center items-center gap-4 w-full">
+    <h2
+      class="text-2xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text pb-2 shadow-md"
+    >
+      👤 Artistas Disponíveis
+    </h2>
+    <div class="flex gap-4 w-full justify-center items-center mb-4">
+      <!-- Campo de Pesquisa -->
+      <div class="w-full max-w-sm">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="onSearchChange()"
+          placeholder="Pesquisar por nome do artista..."
+          class="w-full bg-gray-700 text-white border border-gray-600 rounded-md p-2 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+          aria-label="Pesquisar artistas por nome"
+        />
+      </div>
+
+      <!-- Seletores de Ordenação -->
+      <div class="flex justify-center items-center gap-4">
+        <select
+          [(ngModel)]="sortBy"
+          (ngModelChange)="sortDirection = 'ASC'; onSortChange()"
+          class="bg-gray-700 text-white border border-gray-600 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="name">Nome</option>
+          <option value="popularity">Popularidade</option>
+        </select>
+        <select
+          [(ngModel)]="sortDirection"
+          (ngModelChange)="onSortChange()"
+          class="bg-gray-700 text-white border border-gray-600 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="ASC" *ngIf="sortBy === 'name'">A-Z</option>
+          <option value="DESC" *ngIf="sortBy === 'name'">Z-A</option>
+          <option value="ASC" *ngIf="sortBy === 'popularity'">Crescente</option>
+          <option value="DESC" *ngIf="sortBy === 'popularity'">
+            Decrescente
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paginação -->
+  <p-paginator
+    [rows]="rowsPerPage"
+    [totalRecords]="totalRecords"
+    (onPageChange)="onPageChange($event)"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} artistas"
+    [showJumpToPageInput]="false"
+    [showPageLinks]="true"
+    class="w-full max-w-6xl"
+    aria-label="Paginação de artistas"
+  ></p-paginator>
+</div>
+
+<!-- Estado de carregamento -->
+<div *ngIf="isLoading" class="text-center text-white">
+  <p class="text-lg">Carregando...</p>
+</div>
+
+<!-- Estado de erro -->
+<div *ngIf="error && !isLoading" class="text-center text-red-500">
+  <p class="text-lg">{{ error }}</p>
+</div>
+
+<!-- Grid de artistas -->
+<div *ngIf="!isLoading && !error" class="h-full">
+  <ul class="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <li
+      *ngFor="let artist of paginatedArtists; let i = index"
+      class="w-full bg-gray-800 rounded-lg flex flex-col items-center relative p-2"
+    >
+      <img
+        [src]="artist.images[0].url"
+        class="w-full rounded-lg object-cover mb-3"
+      />
+      <p class="text-white font-medium text-xl truncate">{{ artist.name }}</p>
+      <span class="text-gray-400 text-sm mb-3"
+        >Popularidade: {{ artist.popularity }}</span
+      >
+      <div class="flex gap-4 mb-2">
+        <app-standard-button
+          [label]="'Perfil'"
+          [color]="'primary'"
+          [icon]="'fas fa-user'"
+          (onClick)="goToArtistProfile(artist.id)"
+        >
+        </app-standard-button>
+        <app-standard-button
+          [label]="'Spotify'"
+          [color]="'success'"
+          [icon]="'fab fa-spotify'"
+          (onClick)="openSpotify(artist.external_urls.spotify)"
+        ></app-standard-button>
+      </div>
+    </li>
+  </ul>
+</div>

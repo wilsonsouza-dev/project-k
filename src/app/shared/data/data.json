@@ -1,0 +1,361 @@
+[
+  {
+    "id": "6YVMFz59CuY7ngCxTxjpxE",
+    "name": "aespa",
+    "debut": "2020-11-17",
+    "disband": null,
+    "empresa": "SM Entertainment",
+    "integrantes": ["Karina", "Giselle", "Winter", "Ningning"],
+    "resumo": "Formado pela SM Entertainment, aespa é um grupo feminino de K-pop que combina membros reais com avatares digitais, conhecidos como æs. Eles debutaram com o single 'Black Mamba' em 2020 e rapidamente ganharam popularidade com sucessos como 'Next Level' e 'Savage'.",
+    "genero": "K-pop",
+    "fandom": "MY"
+  },
+  {
+    "id": "1SIocsqdEefUTE6XKGUiVS",
+    "name": "Babymonster",
+    "debut": "2024-04-01",
+    "disband": null,
+    "empresa": "YG Entertainment",
+    "integrantes": [
+      "Pharita",
+      "Chiquita",
+      "Phumin",
+      "Parita",
+      "Mashiho",
+      "Ariana",
+      "Nina"
+    ],
+    "resumo": "Babymonster é um grupo feminino de K-pop formado pela YG Entertainment. Conhecido por sua formação diversificada, o grupo debutou com o single 'Sheesh' em 2024, demonstrando habilidades impressionantes em canto e dança.",
+    "genero": "K-pop",
+    "fandom": "Baby"
+  },
+  {
+    "id": "41MozSoPIsD1dJM0CLPjZF",
+    "name": "BLACKPINK",
+    "debut": "2016-08-08",
+    "disband": null,
+    "empresa": "YG Entertainment",
+    "integrantes": ["Jisoo", "Jennie", "Rosé", "Lisa"],
+    "resumo": "BLACKPINK é um dos grupos femininos de K-pop mais populares globalmente, formado pela YG Entertainment. Desde seu debut em 2016 com 'Boombayah', elas acumularam sucessos como 'DDU-DU DDU-DU' e 'How You Like That'.",
+    "genero": "K-pop",
+    "fandom": "Blinks"
+  },
+  {
+    "id": "5V1qsQHdXNm4ZEZHWvFnqQ",
+    "name": "Dreamcatcher",
+    "debut": "2014-09-18",
+    "disband": null,
+    "empresa": "Dreamcatcher Company",
+    "integrantes": [
+      "JiU",
+      "SuA",
+      "Sihyeon",
+      "Handong",
+      "Yoohyeon",
+      "Dami",
+      "Gahyeon"
+    ],
+    "resumo": "Dreamcatcher é um grupo feminino de K-pop conhecido por seu conceito único de rock e horror. Elas debutaram como MINX em 2014 e se rebatizaram como Dreamcatcher em 2017, lançando músicas como 'Chase Me' e 'Scream'.",
+    "genero": "K-pop",
+    "fandom": "InSomnia"
+  },
+  {
+    "id": "1xs6WFotNQSXweo0GXrS0O",
+    "name": "EXID",
+    "debut": "2012-02-16",
+    "disband": null,
+    "empresa": "Banana Culture Entertainment",
+    "integrantes": ["Solji", "LE", "Hani", "Hyelin", "Jeonghwa"],
+    "resumo": "EXID é um grupo feminino de K-pop que ganhou destaque com seu hit 'Up & Down' em 2012. Conhecidas por suas performances energéticas, elas também são reconhecidas por músicas como 'Hot Pink' e 'DDD'.",
+    "genero": "K-pop",
+    "fandom": "LEGGO"
+  },
+  {
+    "id": "24nUVBIlCGi4twz4nYxJum",
+    "name": "fromis_9",
+    "debut": "2018-01-24",
+    "disband": null,
+    "empresa": "Pledis Entertainment",
+    "integrantes": [
+      "Saerom",
+      "Somi",
+      "Jiwon",
+      "Nakyung",
+      "Hayoung",
+      "Jisun",
+      "Seoyeon",
+      "Jiheon",
+      "Gyuri"
+    ],
+    "resumo": "fromis_9 é um grupo feminino de K-pop formado através do programa de sobrevivência 'Idol School' em 2017. Elas debutaram com o single 'To. Heart' em 2018 e são conhecidas por músicas como 'Love Bomb' e 'Feel Good'.",
+    "genero": "K-pop",
+    "fandom": "FROMIS"
+  },
+  {
+    "id": "0qlWcS66ohOIi0M8JZwPft",
+    "name": "GFRIEND",
+    "debut": "2015-01-16",
+    "disband": "2021-05-22",
+    "empresa": "Source Music",
+    "integrantes": ["Sowon", "Yerin", "Eunha", "Yuju", "SinB", "Umji"],
+    "resumo": "GFRIEND foi um grupo feminino de K-pop que debutou em 2015 com 'Glass Bead'. Conhecidas por suas performances sincronizadas e músicas cativantes como 'Me Gustas Tu' e 'Rough', o grupo se desfez em 2021.",
+    "genero": "K-pop",
+    "fandom": "Buddies"
+  },
+  {
+    "id": "2AfmfGFbe0A0WsTYm0SDTx",
+    "name": "(G)I-DLE",
+    "debut": "2018-05-02",
+    "disband": null,
+    "empresa": "CUBE Entertainment",
+    "integrantes": ["Soyeon", "Minnie", "Soojin", "Yuqi", "Shuhua"],
+    "resumo": "(G)I-DLE é um grupo feminino de K-pop formado pela CUBE Entertainment. Elas debutaram com 'LATATA' em 2018 e rapidamente se destacaram com sucessos como 'Hann (Alone)' e 'Tomboy'.",
+    "genero": "K-pop",
+    "fandom": "Neverland"
+  },
+  {
+    "id": "2KC9Qb60EaY0kW4eH68vr3",
+    "name": "Itzy",
+    "debut": "2019-02-12",
+    "disband": null,
+    "empresa": "JYP Entertainment",
+    "integrantes": ["Yeji", "Lia", "Ryujin", "Chaeryeong", "Yuna"],
+    "resumo": "Itzy é um grupo feminino de K-pop formado pela JYP Entertainment. Elas debutaram com o single 'It'z Different' em 2019 e são conhecidas por músicas como 'Dalla Dalla' e 'Wannabe', que enfatizam temas de autoconfiança e empoderamento.",
+    "genero": "K-pop",
+    "fandom": "MIDZY"
+  },
+  {
+    "id": "6RHTUrRF63xao58xh9FXYJ",
+    "name": "IVE",
+    "debut": "2021-12-01",
+    "disband": null,
+    "empresa": "Starship Entertainment",
+    "integrantes": ["Yujin", "Gaeul", "Sunghoon", "Liz", "Leeseo", "Lynn"],
+    "resumo": "IVE é um grupo feminino de K-pop formado pela Starship Entertainment. Elas debutaram com o single 'Eleven' em 2021 e rapidamente ganharam popularidade com sucessos como 'Love Dive' e 'After Like'.",
+    "genero": "K-pop",
+    "fandom": "DIVE"
+  },
+  {
+    "id": "7aZ221EQfonNG2lO9Hh192",
+    "name": "KARA",
+    "debut": "2007-03-29",
+    "disband": "2016-01-15",
+    "empresa": "DSP Media",
+    "integrantes": ["Gyuri", "Seungyeon", "Nicole", "Jiyoung", "Hara"],
+    "resumo": "KARA foi um grupo feminino de K-pop que debutou em 2007 com o single 'Break It'. Conhecidas por sucessos como 'Mister' e 'Lupin', o grupo se desfez em 2016 após quase uma década de atividades.",
+    "genero": "K-pop",
+    "fandom": "Kamilia"
+  },
+  {
+    "id": "4TEK9tIkcoxib4GxT3O4ky",
+    "name": "Kiss of Life",
+    "debut": "2023-08-15",
+    "disband": null,
+    "empresa": "SM Entertainment",
+    "integrantes": [
+      "Soeun",
+      "Soeun",
+      "Soojin",
+      "Soojin",
+      "Yuna",
+      "Yuna",
+      "Jiwon",
+      "Jiwon",
+      "Nari",
+      "Nari"
+    ],
+    "resumo": "Kiss of Life é um grupo feminino de K-pop formado pela SM Entertainment. Elas debutaram com o single 'Kiss of Life' em 2023, apresentando um conceito fresco e energético.",
+    "genero": "K-pop",
+    "fandom": "KissMe"
+  },
+  {
+    "id": "4SpbR6yFEvexJuaBpgAU5p",
+    "name": "Le Sserafim",
+    "debut": "2022-05-02",
+    "disband": null,
+    "empresa": "Source Music",
+    "integrantes": [
+      "Sakura",
+      "Kim Chae-won",
+      "Huh Yun-jin",
+      "Kazuha",
+      "Hong Eun-chae"
+    ],
+    "resumo": "Le Sserafim é um grupo feminino de K-pop formado pela Source Music, uma subsidiária da BigHit Entertainment. Elas debutaram com o single 'Fearless' em 2022 e são reconhecidas por seu conceito ousado e performances intensas.",
+    "genero": "K-pop",
+    "fandom": "FEARNOT"
+  },
+  {
+    "id": "52zMTJCKluDlFwMQWmccY7",
+    "name": "LOONA",
+    "debut": "2018-08-20",
+    "disband": null,
+    "empresa": "Blockberry Creative",
+    "integrantes": [
+      "HeeJin",
+      "HyunJin",
+      "HaSeul",
+      "YeoJin",
+      "ViVi",
+      "Kim Lip",
+      "JinSoul",
+      "Choerry",
+      "Yves",
+      "Chuu",
+      "Go Won",
+      "Olivia Hye"
+    ],
+    "resumo": "LOONA é um grupo feminino de K-pop conhecido por seu conceito único de pré-debut, onde cada membro teve seu próprio single antes do debut oficial do grupo. Elas debutaram com o single 'Hi High' em 2018.",
+    "genero": "K-pop",
+    "fandom": "Orbit"
+  },
+  {
+    "id": "0XATRDCYuuGhk0oE7C0o5G",
+    "name": "MAMAMOO",
+    "debut": "2014-06-18",
+    "disband": null,
+    "empresa": "RBW",
+    "integrantes": ["Solar", "Moonbyul", "Wheein", "Hwasa"],
+    "resumo": "MAMAMOO é um grupo feminino de K-pop reconhecido por suas habilidades vocais excepcionais e performances energéticas. Elas debutaram em 2014 com o single 'Mr. Ambiguous' e são conhecidas por músicas como 'HIP' e 'Dab Dab'.",
+    "genero": "K-pop",
+    "fandom": "Moomoo"
+  },
+  {
+    "id": "6HvZYsbFfjnjFrWF950C9d",
+    "name": "NewJeans",
+    "debut": "2022-08-01",
+    "disband": null,
+    "empresa": "ADOR",
+    "integrantes": ["Minji", "Hanni", "Danielle", "Haerin", "Hyein"],
+    "resumo": "NewJeans é um grupo feminino de K-pop formado pela ADOR, uma subsidiária da HYBE Corporation. Elas debutaram com o single 'Attention' em 2022 e rapidamente se destacaram com seu som retrô e estilo único.",
+    "genero": "K-pop",
+    "fandom": "Bunnies"
+  },
+
+  {
+    "id": "1z4g3DjTBBZKhvAroFlhOM",
+    "name": "Red Velvet",
+    "debut": "2014-08-01",
+    "disband": null,
+    "empresa": "SM Entertainment",
+    "integrantes": ["Irene", "Seulgi", "Wendy", "Joy", "Yeri"],
+    "resumo": "Red Velvet é um grupo feminino de K-pop formado pela SM Entertainment. Elas debutaram em 2014 com o single 'Happiness' e são conhecidas por sua versatilidade musical, explorando diversos gêneros ao longo de sua carreira.",
+    "genero": "K-pop",
+    "fandom": "ReVeluv"
+  },
+  {
+    "id": "0Sadg1vgvaPqGTOjxu0N6c",
+    "name": "Girls' Generation (SNSD)",
+    "debut": "2007-08-05",
+    "disband": null,
+    "empresa": "SM Entertainment",
+    "integrantes": [
+      "Taeyeon",
+      "Sunny",
+      "Tiffany",
+      "Hyoyeon",
+      "Yuri",
+      "Sooyoung",
+      "Yoona",
+      "Seohyun"
+    ],
+    "resumo": "Girls' Generation, também conhecido como SNSD, é um grupo feminino de K-pop formado pela SM Entertainment. Elas debutaram em 2007 com o single 'Into the New World' e são consideradas uma das grupos femininos mais influentes da história do K-pop.",
+    "genero": "K-pop",
+    "fandom": "S♡NE"
+  },
+  {
+    "id": "01XYiBYaoMJcNhPokrg0l0",
+    "name": "STAYC",
+    "debut": "2020-11-12",
+    "disband": null,
+    "empresa": "High Up Entertainment",
+    "integrantes": ["Sumin", "Sieun", "J", "Isa", "Seeun", "Yoon"],
+    "resumo": "STAYC é um grupo feminino de K-pop formado pela High Up Entertainment. Elas debutaram com o single 'Star To A Young Culture' em 2020 e são conhecidas por seu som energético e performances cativantes.",
+    "genero": "K-pop",
+    "fandom": "SWITH"
+  },
+  {
+    "id": "7n2Ycct7Beij7Dj7meI4X0",
+    "name": "Twice",
+    "debut": "2015-10-20",
+    "disband": null,
+    "empresa": "JYP Entertainment",
+    "integrantes": [
+      "Nayeon",
+      "Jeongyeon",
+      "Momo",
+      "Sana",
+      "Jihyo",
+      "Minatozaki",
+      "Dahyun",
+      "Chaeyoung",
+      "Tzuyu"
+    ],
+    "resumo": "Twice é um grupo feminino de K-pop formado pela JYP Entertainment. Elas debutaram em 2015 através do programa de sobrevivência 'Sixteen' e rapidamente se tornaram um dos grupos mais populares da terceira geração do K-pop.",
+    "genero": "K-pop",
+    "fandom": "ONCE"
+  },
+  {
+    "id": "7Lq3yAtwi0Z7zpxEwbQQNZ",
+    "name": "VIVIZ",
+    "debut": "2022-02-09",
+    "disband": null,
+    "empresa": "Big Planet Made",
+    "integrantes": ["Eunha", "SinB", "Umji"],
+    "resumo": "VIVIZ é um grupo feminino de K-pop formado pelas ex-integrantes do GFriend: Eunha, SinB e Umji. Elas debutaram em 2022 com o mini-álbum 'Beam of Prism' e têm explorado um conceito mais maduro em sua música.",
+    "genero": "K-pop",
+    "fandom": "V-Learners"
+  },
+  {
+    "id": "28ot3wh4oNmoFOdVajibBl",
+    "name": "NMIXX",
+    "debut": "2022-02-22",
+    "disband": null,
+    "empresa": "JYP Entertainment",
+    "integrantes": ["Haewon", "Lily", "Sullyoon", "Bae", "Jiwoo", "Kyujin"],
+    "resumo": "NMIXX é um grupo feminino sul-coreano formado pela JYP Entertainment. Elas debutaram em 2022 com o single 'AD MARE'. O grupo é conhecido por sua diversidade musical e conceito inovador.",
+    "genero": "K-pop",
+    "fandom": "NSWER"
+  },
+  {
+    "id": "36cgvBn0aadzOijnjjwqMN",
+    "name": "ILLIT",
+    "debut": "2024-03-25",
+    "disband": null,
+    "empresa": "Belift Lab",
+    "integrantes": ["Yunah", "Minju", "Moka", "Wonhee", "Iroha"],
+    "resumo": "ILLIT é um grupo feminino sul-coreano formado pela Belift Lab, uma subsidiária da HYBE. Elas debutaram em 2024 após o programa de sobrevivência 'R U Next?' e rapidamente ganharam popularidade com seu single 'Magnetic'.",
+    "genero": "K-pop",
+    "fandom": "ILLITics"
+  },
+  {
+    "id": "0LOK81e9H5lr61HlGGHqwA",
+    "name": "XG",
+    "debut": "2022-03-18",
+    "disband": null,
+    "empresa": "Xgalx",
+    "integrantes": [
+      "Jurin",
+      "Chisa",
+      "Hinata",
+      "Harvey",
+      "Juria",
+      "Maya",
+      "Cocona"
+    ],
+    "resumo": "XG é um grupo feminino japonês baseado na Coreia do Sul, formado pela Xgalx, uma subsidiária da Avex. Composto por sete membros — Jurin (líder), Chisa, Hinata, Harvey, Juria, Maya e Cocona — o grupo estreou em 18 de março de 2022 com o single digital 'Tippy Toes'. Conhecidas por sua música inovadora que mistura R&B e hip-hop, as integrantes passaram por treinamento no estilo K-pop. Em fevereiro de 2025, XG foi escolhida como rosto da marca de cosméticos Anessa, com a música 'Is This Love' sendo tema da campanha global. Além disso, foram destacadas na lista '25 Musicians to Watch in 2025' da InStyle.",
+    "genero": "R&B, Hip-Hop",
+    "fandom": "Alphaz"
+  },
+  {
+    "id": "5Z71xE9prhpHrqL5thVMyK",
+    "name": "tripleS",
+    "debut": "2023-02-10",
+    "disband": null,
+    "empresa": "Modhaus",
+    "integrantes": ["Jeong HyeRin", "Lee JiWoo", "Kim ChaeYeon", "Kim YooYeon", "Kim SooMin", "Kim NaKyoung", "Gong YuBin", "Seo DaHyun", "Kim HyeRim", "Nien", "Kaede", "Seo DaHyun"],
+    "resumo": "tripleS é um grupo feminino sul-coreano formado pela Modhaus. Elas debutaram em 2023 e são conhecidas por seu conceito inovador, que permite aos fãs influenciar as atividades do grupo através de um sistema de subunidades.",
+    "genero": "K-pop",
+    "fandom": null
+  }
+]
