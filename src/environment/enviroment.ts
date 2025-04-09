@@ -8,6 +8,6 @@ export const environment = {
   youtubeApiUrl: 'https://youtube.kwaps.online/api/youtube',
   spotifyAuthUrl: 'https://accounts.spotify.com/authorize',
   spotifyClientId: '9c9ac779f0e54ee7af47d03d14f4ba6c',
-  spotifyRedirectUri: 'https://kwaps.online:4200/spotify/callback',
+  spotifyRedirectUri: 'https://kwaps.online/spotify/callback',
   spotifyScope: scopes,
 };
