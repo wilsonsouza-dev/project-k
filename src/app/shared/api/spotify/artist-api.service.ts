@@ -19,11 +19,14 @@ export class ArtistApiService {
 
   constructor(private http: HttpClient) {}
 
-  getSeveralArtist(id: string): Observable<Artist[]> {
+  getSeveralArtist(ids: string[]): Observable<Artist[]> {
     return this.http
-      .get<Artist[]>(`${this.apiUrl}/${id}/severalArtists`)
+      .post<Artist[]>(`${this.apiUrl}/severalArtists`, ids, {
+        headers: this.jsonHeaders,
+      })
       .pipe(catchError(this.handleError));
   }
+  
 
   getArtistById(id: string): Observable<Artist> {
     return this.http
