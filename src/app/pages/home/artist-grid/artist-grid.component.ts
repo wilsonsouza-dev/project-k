@@ -41,7 +41,7 @@ export class ArtistGridComponent implements OnInit {
   loadArtists() {
     this.isLoading = true;
     this.error = null;
-    const allIds = options.map((item) => item.id).join(','); // Mantém a busca pelos allIds
+    const allIds = options.map((item) => item.id); // Mantém a busca pelos allIds
     const cache = this.cacheService.get<Artist[]>(this.cacheKey);
     if (cache) {
       console.log('✅ Cache HIT:', cache);

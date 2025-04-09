@@ -83,7 +83,7 @@ export class NavbarComponent implements OnInit {
   }
 
   getAllArtists() {
-    const allIds = options.map((item) => item.id).join(',');
+    const allIds = options.map((item) => item.id);
     this.artistApiService.getSeveralArtist(allIds).subscribe((data) => {
       this.allArtists = data;
     });
