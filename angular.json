@@ -42,7 +42,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/project-k/"
+              "baseHref": "/"
             },
             "development": {
               "optimization": false,
