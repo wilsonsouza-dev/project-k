@@ -30,6 +30,11 @@ export class ArtistVideosComponent {
     this.getMostRelevantVideos();
   }
 
+  ngOnChanges() {
+    this.getGroup(this.id);
+    this.getMostRelevantVideos();
+  }
+
   selectedVideo: YoutubeVideo | null = null;
   displayModal = false;
   safeVideoUrl?: SafeResourceUrl;
@@ -65,7 +70,7 @@ export class ArtistVideosComponent {
       .getMostRelevantVideos(youtubeChannelId, name)
       .subscribe({
         next: (response) => {
-          this.videos = response.filter(video => video.id.videoId);
+          this.videos = response.filter((video) => video.id.videoId);
           console.log('Vídeos recebidos:', this.videos);
         },
         error: (err) => {

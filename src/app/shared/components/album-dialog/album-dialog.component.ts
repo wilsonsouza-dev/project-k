@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SliderModule } from 'primeng/slider';
 import { Observable, Subject } from 'rxjs';
@@ -12,11 +12,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './album-dialog.component.html',
   imports: [SharedModule, CommonModule, SliderModule, FormsModule],
 })
-export class AlbumDialogComponent implements OnInit, OnDestroy {
+export class AlbumDialogComponent implements OnInit {
   displayDialog$: Observable<boolean>;
   selectedAlbum$: Observable<any>;
   tracks$: Observable<any[]>;
   tracks: any[] = [];
+  safeTrackUrl: SafeResourceUrl | null = null;
+  trackPreviewId: string | null = null;
 
   private destroy$ = new Subject<void>();
 
@@ -35,21 +37,11 @@ export class AlbumDialogComponent implements OnInit, OnDestroy {
     });
   }
 
-  trackPreviewId: string | null = null;
-
   setTrackPreview(id: string) {
     this.trackPreviewId = id;
-  }
-
-  getSafeTrackUrl(trackId: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://open.spotify.com/embed/track/${trackId}`
+    this.safeTrackUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://open.spotify.com/embed/track/${id}`
     );
-  }
-
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
   }
 
   onDialogVisibilityChange(event: boolean) {

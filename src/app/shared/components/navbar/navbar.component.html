@@ -56,27 +56,4 @@
       </div>
     </ng-template>
   </p-select>
-
-  <!-- User -->
-  <div *ngIf="user$ | async as user; else loginButton">
-    <p-menu [model]="menuItems" [popup]="true" #menu></p-menu>
-    <button (click)="menu.toggle($event)" class="btn-custom">
-      <img [src]="user?.images?.[0]?.url" class="w-8 h-8 rounded-full" />
-      <span class="text-2xl font-semibold text-white tracking-wide">{{
-        user?.display_name
-      }}</span>
-      <i class="fa fa-chevron-down"></i>
-    </button>
-  </div>
-
-  <!-- Login -->
-  <ng-template #loginButton>
-    <button
-      class="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition cursor-pointer"
-      (click)="redirectToSpotify()"
-    >
-      <i class="fab fa-spotify text-2xl"></i>
-      <span class="hidden md:block">Login Spotify</span>
-    </button>
-  </ng-template>
 </div>
