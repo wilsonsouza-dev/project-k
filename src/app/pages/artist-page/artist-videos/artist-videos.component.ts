@@ -25,11 +25,6 @@ export class ArtistVideosComponent {
     private sanitizer: DomSanitizer
   ) {}
 
-  ngOnInit() {
-    this.getGroup(this.id);
-    this.getMostRelevantVideos();
-  }
-
   ngOnChanges() {
     this.getGroup(this.id);
     this.getMostRelevantVideos();

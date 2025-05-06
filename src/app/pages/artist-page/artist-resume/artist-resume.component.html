@@ -1,0 +1,68 @@
+<div class="w-4/5 mx-auto items-center grid text-800 my-15 p-2">
+  <div class="md:col-4">
+    <section class="flex flex-col h-full">
+      <span class="block text-6xl font-bold mb-1">
+        {{ artistResume.name }}
+      </span>
+
+      <!-- Se artistResume ainda não estiver carregado, exibe o skeleton -->
+      <ng-template #skeletonName>
+        <p-skeleton width="60%" height="40px"></p-skeleton>
+      </ng-template>
+
+      <!-- Verifica se os dados do artista estão carregados -->
+      <div>
+        <div class="text-4xl text-primary font-bold mb-3">
+          {{ artistResume.label }}
+        </div>
+        <div class="mt-0 mb-4 w-3/4 text-800 text-justify">
+          {{ artistResume.biography }}
+        </div>
+      </div>
+
+      <div class="mt-auto">
+        <button
+          pButton
+          pRipple
+          label="Spotify"
+          icon="fa-brands fa-spotify"
+          type="button"
+          class="mr-3 p-button-outlined"
+        ></button>
+        <button
+          pButton
+          pRipple
+          label="Youtube"
+          type="button"
+          icon="fa-brands fa-youtube"
+          class="mr-3 p-button-outlined"
+        ></button>
+        <button
+          pButton
+          pRipple
+          label="Instagram"
+          type="button"
+          icon="fa-brands fa-instagram"
+          class="mr-3 p-button-outlined"
+        ></button>
+        <button
+          pButton
+          pRipple
+          label="Twitter"
+          type="button"
+          icon="fa-brands fa-twitter"
+          class="mr-3 p-button-outlined"
+        ></button>
+      </div>
+    </section>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <img
+      [src]="artist != null ? artist.images[0].url : 'assets/no-image.jpg'"
+      alt="Image"
+      class="max-w-lg max-h-lg rounded-e-xl fade-in"
+      style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)"
+    />
+  </div>
+</div>
