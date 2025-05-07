@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArtistApiService } from '../../shared/api/spotify/artist-api.service';
 import { AlbumDialogComponent } from '../../shared/components/album-dialog/album-dialog.component';
 import { Artist } from '../../shared/model/artist';
@@ -10,6 +10,7 @@ import { ArtistAlbumsComponent } from './artist-albums/artist-albums.component';
 import { ArtistMembersComponent } from './artist-members/artist-members.component';
 import { ArtistResumeComponent } from './artist-resume/artist-resume.component';
 import { ArtistVideosComponent } from './artist-videos/artist-videos.component';
+import { options } from '../../shared/data/options';
 
 @Component({
   selector: 'app-artist-page',
@@ -27,7 +28,8 @@ import { ArtistVideosComponent } from './artist-videos/artist-videos.component';
 export class ArtistPageComponent implements OnInit {
   constructor(
     private artistApiService: ArtistApiService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   id!: string;
@@ -38,6 +40,12 @@ export class ArtistPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.id = params.get('id')!;
+
+      const artistExists = options.some((artist) => artist.id === this.id);
+      if (!artistExists) {
+        this.router.navigate(['/not-found']);
+        return;
+      }
       this.loadData();
     });
   }

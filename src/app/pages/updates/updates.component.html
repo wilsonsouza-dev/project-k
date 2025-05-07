@@ -1,0 +1,19 @@
+<div class="max-w-7xl mx-auto p-6">
+  <h1 class="text-3xl font-bold text-center mb-8">📢 Atualizações do Site</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div
+      *ngFor="let update of updates"
+      class="bg-black shadow rounded-xl p-5 mb-2 min-h-[200px] flex flex-col"
+    
+    >
+      <h2 class="text-xl font-semibold mb-1">{{ update.title }}</h2>
+      <p class="text-lg text-gray-500 mb-1">
+        • <span class="font-medium text-blue-600">{{ update.category }}</span> 
+      </p>
+      <p class="text-lg text-gray-500 mb-3">
+        • Adicionado em: <span class="text-gray-400">{{ update.date }}</span>
+      </p>
+      <p class="text-gray">{{ update.description }}</p>
+    </div>
+  </div>
+</div>
