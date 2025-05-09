@@ -13,9 +13,12 @@ import { ArtistApiService } from '../../api/spotify/artist-api.service';
   imports: [SharedModule, CommonModule],
 })
 export class NavbarComponent implements OnInit {
-  selectArtist: any = null;
   allArtists: Artist[] = [];
   menuItems: MenuItem[] = [];
+  filteredArtists: Artist[] = [];
+  selectArtist: Artist | null = null;
+  searchQuery: string = '';
+  isDropdownOpen: boolean = false;
   constructor(
     private router: Router,
     private artistApiService: ArtistApiService
@@ -23,6 +26,26 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.getAllArtists();
+  }
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  filterArtists(): void {
+    if (!this.searchQuery) {
+      this.filteredArtists = [...this.allArtists];
+    } else {
+      this.filteredArtists = this.allArtists.filter((artist) =>
+        artist.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
+  }
+
+  selectArtistAndClose(artist: Artist): void {
+    this.selectArtist = artist;
+    this.isDropdownOpen = false;
+    this.onArtistSelect();
   }
 
   goToHome() {
@@ -45,6 +68,8 @@ export class NavbarComponent implements OnInit {
     const allIds = options.map((item) => item.id);
     this.artistApiService.getSeveralArtist(allIds).subscribe((data) => {
       this.allArtists = data;
+      this.filteredArtists = [...this.allArtists];
     });
   }
+  
 }

@@ -24,6 +24,29 @@ export class ArtistAlbumsComponent {
     private artistApiService: ArtistApiService
   ) {}
 
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '3840px',
+      numVisible: 3,
+      numScroll: 3,
+    },
+    {
+      breakpoint: '1024px', // Tamanho de tela para tablets
+      numVisible: 3,
+      numScroll: 2,
+    },
+    {
+      breakpoint: '768px', // Tamanho de tela para dispositivos móveis grandes (iPad, etc.)
+      numVisible: 2,
+      numScroll: 2,
+    },
+    {
+      breakpoint: '640px', // Tamanho de tela para smartphones
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
+
   ngOnChanges() {
     this.getArtistAlbums();
   }

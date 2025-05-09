@@ -1,11 +1,11 @@
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-7 w-full mt-8">
-  <div class="container mx-auto px-6 lg:px-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 mx-auto gap-4">
+<footer class="bg-gray-800 text-white py-4 w-full mt-6">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- 🌟 Sobre Nós -->
       <div>
-        <h3 class="text-lg font-semibold">Sobre Mim</h3>
-        <p class="text-sm mt-2 text-gray-400 max-w-sm">
+        <h3 class="text-base sm:text-lg font-semibold">Sobre Mim</h3>
+        <p class="text-sm mt-2 text-gray-400 max-w-xs sm:max-w-sm">
           Sou um desenvolvedor que gosta de unir hobbies com ideias e com isso
           posso me divertir enquanto aprendo.
         </p>
@@ -13,50 +13,49 @@
 
       <!-- 🔗 Links Rápidos -->
       <div>
-        <h3 class="text-lg font-semibold">Links Rápidos</h3>
-        <div class="mt-2 space-y-2 flex flex-col">
-          <a href="#" class="text-gray-400 hover:text-white">Início</a>
-          <a href="#" class="text-gray-400 hover:text-white">Serviços</a>
+        <h3 class="text-base sm:text-lg font-semibold">Links Rápidos</h3>
+        <div class="mt-2 space-y-2 flex gap-3">
+          <a href="#" class="text-gray-400 hover:text-gray-200">Início</a>
+          <a href="#" class="text-gray-400 hover:text-gray-200">Serviços</a>
+          <a href="#" class="text-gray-400 hover:text-gray-200">Projetos</a>
         </div>
       </div>
 
       <!-- 📞 Contato -->
       <div>
-        <h3 class="text-lg font-semibold">Contato</h3>
+        <h3 class="text-base sm:text-lg font-semibold">Contato</h3>
         <div class="flex gap-4 mt-4">
           <a
             href="https://www.linkedin.com/in/wilson-and/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-400 text-2xl hover:text-white"
+            class="text-gray-400 hover:text-gray-200 transition-colors duration-200"
           >
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin text-xl sm:text-2xl"></i>
           </a>
-
           <a
             href="mailto:wilsonsouza.dev@gmail.com"
-            class="text-gray-400 text-2xl hover:text-white"
+            class="text-gray-400 hover:text-gray-200 transition-colors duration-200"
           >
-            <i class="fa fa-envelope"></i>
+            <i class="fa fa-envelope text-xl sm:text-2xl"></i>
           </a>
-
           <a
             href="https://discord.com/channels/@me/1189662641073950803"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-400 text-2xl hover:text-white"
+            class="text-gray-400 hover:text-gray-200 transition-colors duration-200"
           >
-            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-discord text-xl sm:text-2xl"></i>
           </a>
         </div>
       </div>
     </div>
 
-    <hr class="my-6 border-t border-gray-300" />
+    <hr class="my-4 border-t border-gray-600" />
 
     <!-- 📌 Direitos Autorais -->
-    <div class="text-center text-gray-300 text-sm">
-      &copy; {{ currentYear }} Todos os direitos reservados.
+    <div class="text-center text-gray-500 text-sm">
+      © {{ currentYear }} Todos os direitos reservados.
     </div>
   </div>
 </footer>

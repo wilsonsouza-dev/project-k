@@ -8,9 +8,9 @@
   border-radius: 0.5rem;
   transition: all 0.2s;
   cursor: pointer;
-  border: 1px solid gray;
+  background: transparent; /* Define um fundo inicial para transição suave */
 }
 
 .btn-custom:hover {
-  background-color: #374151; /* Equivalent to hover:bg-gray-700 */
+  background: linear-gradient(to right, #9333ea, #ec4899); /* Equivalente a hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 */
 }

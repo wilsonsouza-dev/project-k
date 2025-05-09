@@ -10,6 +10,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-album-dialog',
   templateUrl: './album-dialog.component.html',
+  styleUrls: ['./album-dialog.component.css'],
   imports: [SharedModule, CommonModule, SliderModule, FormsModule],
 })
 export class AlbumDialogComponent implements OnInit {
