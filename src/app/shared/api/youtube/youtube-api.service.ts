@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { YoutubeVideo } from '../../model/youtube/youtubeVideo';
-import { environment } from '../../../../environment/env-prod';
+import { environment } from '../../../../environments/env';
 
 @Injectable({
   providedIn: 'root',

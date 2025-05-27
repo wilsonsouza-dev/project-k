@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { ArtistResume } from '../../model/artistResume';
 import { Album } from '../../model/album';
-import { environment } from '../../../../environment/env-prod';
+import { environment } from '../../../../environments/env';
 @Injectable({
   providedIn: 'root',
 })
